@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from typing import Generic
+from django.views.generic import TemplateView,ListView,DetailView
 
-# Create your views here.
+
+class SnackListView(DetailView):
+    template_name = 'snack_list.html'
