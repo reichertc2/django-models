@@ -3,9 +3,9 @@ from django.contrib.auth import get_user_model
 
 
 class Snack(models.Model):
-    name = models.CharField(max_length=256)
-    rating = models.BigIntegerField(default=0)
-    reviewer = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    name = models.CharField(max_length=64)
+    purchaser = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    description = models.TextField(max_length=1024)
 
     def __str__(self):
         return self.name
